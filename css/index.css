@@ -1,0 +1,304 @@
+.video-ad-container {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: #000; /* Fallback background */
+      border-radius: 8px; /* Native ad aesthetic */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Video styling */
+    .video-ad {
+      width: 100%;
+      height: auto;
+      display: block;
+      pointer-events: none; /* Prevent interaction with video controls */
+    }
+
+    /* Mute/Unmute button */
+    .mute-toggle {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.3s;
+    }
+
+    .mute-toggle:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    /* Ensure the video fits mobile screens */
+    @media (max-width: 1080px) {
+      .video-ad-container {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+
+
+
+
+
+    /* Existing styles for tickets-container and other buttons (simplified) */
+    .tickets-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .boton-compra-online,
+    .boton-mapa-taquilla {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 2px solid #fff;
+      border-radius: 25px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    .boton-compra-online:hover,
+    .boton-mapa-taquilla:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .boton-compra-online:active,
+    .boton-mapa-taquilla:active {
+      background: #fff;
+      color: #000;
+    }
+
+    .boton-compra-online:focus,
+    .boton-mapa-taquilla:focus {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* Corrected and specific styles for boton-mas-informacion */
+    .tickets-container .boton-mas-informacion {
+      display: inline-block;
+      padding: 14px 28px; /* Slightly larger for distinction */
+      border: 2px solid #000; /* Black border */
+      border-radius: 30px; /* More rounded for uniqueness */
+      color: #000 !important; /* Black text, high priority */
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700; /* Bolder font for emphasis */
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      background: #fff; /* White background */
+    }
+
+    .tickets-container .boton-mas-informacion:hover {
+      background: #e0e0e0; /* Light gray hover for contrast */
+      color: #000 !important; /* Ensure black text */
+    }
+
+    .tickets-container .boton-mas-informacion:active {
+      background: #ccc; /* Darker gray on click */
+      color: #000 !important; /* Ensure black text */
+    }
+
+    .tickets-container .boton-mas-informacion:focus {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      .tickets-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .boton-compra-online,
+      .boton-mapa-taquilla,
+      .tickets-container .boton-mas-informacion {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+
+
+
+
+.cabecera-tarjeta {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos pasen a otra línea en pantallas pequeñas */
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  justify-content: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo-cabecera {
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+}
+
+.titulo-cabecera {
+  margin: 0;
+  color: #7AB8FF;
+  font-size: x-large;
+  font-weight: 800;
+  text-align: center;
+  word-break: normal;
+  hyphens: none;
+
+}
+
+@media (max-width: 600px) {
+  .cabecera-tarjeta {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo-cabecera {
+    height: 100px;
+  }
+
+  .titulo-cabecera {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+#visor_fotos_proyectos {
+
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#contenedor_visor_fotos {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  aspect-ratio: 4 / 3;
+  border: 1px solid #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+#imagen_foto_proyecto {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.boton_navegacion_visor {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.boton_navegacion_visor:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.boton_izquierda_visor { left: 10px; }
+.boton_derecha_visor { right: 10px; }
+
+.boton_navegacion_visor svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.linea_separadora_visor {
+  width: 90%;
+  max-width: 600px;
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+
+#controles_visor {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.boton_control_visor {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.boton_control_visor:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.boton_control_visor:active {
+  background: #fff;
+  color: #000;
+}
+
+
+
+
+
+.twitter_contenedor_responsivo {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.twitter_contenedor_responsivo iframe {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 550 / 650;
+  border: none;
+}

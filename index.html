@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="theme-dark" lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miliun Pasos | Artes escénicas</title>
+    <link rel="icon" type="image/png" href="images/avatar.png"><!-- FAVICON -->
+    <meta name="description" content="Compañía de artes escénicas">
+    <meta name="keywords" content="teatro, danza, fotografía, actores, actrices, escénico, reparto, guión, en vivo, cdmx, show, actos">
+    <meta rel="canonical" href="alanmezachavez.rf.gd">
+    <meta name="miliunpasos" content="artes escénicas, CDMX, México">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <a href="https://wa.me/5563187420?text=Hola,%20quiero%20más%20información%20sobre%20miliunpasos"
+      class="whatsapp" target="_blank">
+    <i class="fa-brands fa-whatsapp whatsapp-iconk">
+    </i>
+    </a>
+    <nav class="mobile-menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span class="menu-text">MENÚ</span>
+      <span class="menu-icon"></span>
+      <span class="menu-icon"></span>
+      <span class="menu-icon"></span>
+      </button>
+      <div class="menu-content" id="menuContent">
+        <a href="#">Inicio</a>
+        <a href="c19.html">C19 | Ecos de lo invisible</a>
+        <a href="#cabecera-tarjeta">Sobre el Laboratorio</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#" class="close-menu" onclick="closeMenu()">Cerrar Menú</a> 
+      </div>
+    </nav>
+
+    <div class="container">
+        <div class="column">
+            <!-- 
+              By default, the Avatar is rounded. Use the following:
+              - avatar--rounded: Automatically rounds the image
+              - avatar--soft: Slightly rounds the image
+              - avatar--none: Removes any rounding
+
+              Be sure to replace the src with your own image path and update the alt text
+            -->
+            <img class="avatar avatar--rounded" src="images/avatar@2x.png" alt="@miliunpasos">
+
+            <!-- Add a short description about yourself or your brand -->
+            <p tabindex="0" style="margin-bottom: 80px; color: #7AB8FF">
+              Laboratorio de creación e investigación <br>donde se entrecruzan el lenguaje escénico y audiovisual 
+            </p>
+ 
+              <h1 tabindex="0">
+              <div>PRÓXIMAS PRESENTACIONES</div>
+            </h1>
+
+<div class="video-ad-container" style="margin-bottom: 5px;">
+  <video id="videoAd" class="video-ad" autoplay muted playsinline>
+    <source src="images/c19/ad_video1.mp4" type="video/mp4">
+    Tu navegador no soporta este formato de video.
+  </video>
+  <button class="mute-toggle" aria-label="Mute video">🔊</button>
+</div>
+
+  <h3 tabindex="0">
+<div>
+  Adquiere tus boletos para <br>
+  <span style="color: red;">C19 | Ecos de los invisible</span> <br>
+  Temporada en Teatro Helénico
+</div>
+ <div class="tickets-container" style="margin-top: -30;">
+    <a href="https://teatrohelenico.comprarboletos.com/artes-escenicas/c19-144" id="compra-online" class="boton-compra-online" role="button" aria-label="Compra entradas online" target="_blank" rel="noopener noreferrer">Comprar Online</a>
+    <a href="https://maps.app.goo.gl/23CsVQhF1r9T2D149" id="mapa-taquilla" class="boton-mapa-taquilla" role="button" aria-label="Comprar entradas en taquilla" target="_blank" rel="noopener noreferrer">Comprar en Taquilla</a>
+    <a href="c19.html" id="mas-informacion" class="boton-mas-informacion" role="button" aria-label="Más información">Más información</a>
+  </div>
+  </h3>
+
+<div class="cabecera-tarjeta" id="cabecera-tarjeta">
+  <img src="images/logo.png" alt="Logo de la compañía" class="logo-cabecera">
+  <h1 class="titulo-cabecera" tabindex="0">SOBRE EL LABORATORIO</h1>
+</div>
+
+
+<p style="font-size: medium; color: #7AB8FF;">
+  "Serendib" y "Sueño Vagabundo" son proyectos anteriores del Laboratorio con los que se ha destacado en festivales nacionales e internacionales, además de consolidarse como un referente en el ámbito de las artes escénicas en México.
+</p>
+
+
+<div id="visor_fotos_proyectos">
+
+  <div class="linea_separadora_visor"></div>
+
+  <div id="contenedor_visor_fotos">
+    <div class="boton_navegacion_visor boton_izquierda_visor" onclick="foto_anterior_visor()">
+      <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    </div>
+    <img id="imagen_foto_proyecto" src="images/projects-photos/" alt="Foto del proyecto">
+    <div class="boton_navegacion_visor boton_derecha_visor" onclick="foto_siguiente_visor()">
+      <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+  </div>
+
+  <div id="controles_visor">
+    <button class="boton_control_visor" onclick="alternar_autoplay_visor()" id="boton_autoplay_visor">⏸ Pausar</button>
+  </div>
+
+  <div class="linea_separadora_visor"></div>
+
+</div>
+
+
+<div class="twitter_contenedor_responsivo" style="margin-bottom: 50px;">
+  <blockquote class="twitter-tweet" data-media-max-width="560">
+    <p lang="es" dir="ltr">
+      Llega al <a href="https://twitter.com/cenartmx?ref_src=twsrc%5Etfw">@cenartmx</a> la obra "C19", un homenaje a los héroes invisibles durante la pandemia por Covid-19 😷<br><br>
+      Más información con <a href="https://twitter.com/RominaRamosC?ref_src=twsrc%5Etfw">@RominaRamosC</a> en <a href="https://t.co/aTkQJpnPTI">https://t.co/aTkQJpnPTI</a> 📰 | <a href="https://t.co/MSrQwruYky">https://t.co/MSrQwruYky</a> <a href="https://t.co/AIsZnvrhoP">pic.twitter.com/AIsZnvrhoP</a>
+    </p>
+    &mdash; adn40 (@adn40) <a href="https://twitter.com/adn40/status/1803513436879356404?ref_src=twsrc%5Etfw">June 19, 2024</a>
+  </blockquote>
+</div>
+
+        <!-- CONTACTO -->
+        <div class="button-stack" role="navigation" id="contacto">
+          <!-- Instagram -->
+          <a class="button button-instagram" href="https://www.instagram.com/miliunpasos" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/instagram.svg" alt="Instagram Logo">Instagram</a>
+          <!-- YouTube -->
+          <a class="button button-yt" href="https://www.youtube.com/@miliunpasos" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/youtube.svg" alt="Instagram Logo">YouTube</a>
+          <!-- Email -->
+          <a class="button button-default" href="mailto:miliunpasos@proton.me" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">Email</a>
+        </div>
+        <footer>
+          Copyright &copy; <span id="year"></span> Miliun Pasos
+          <br>Todos los Derechos Reservados
+        </footer>
+      </div>
+    </div>
+    <script src="js/global.js"></script>
+    <script src="js/index.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </body>
+</html>
+
+<!--__/\\\\\\\\\\\\\\\__/\\\________/\\\____/\\\\\\\\\________/\\\\\\\\\___________/\\\\\_______/\\\\\_____/\\\____________/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\____________/\\\_________________/\\\\\\\\\_____________________/\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\\\\__/\\\\\\\\\\\\\\\_______________/\\\\\\\\\\\_______/\\\\\\\\\_______________/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\__________________/\\\\\\\\\__/\\\________/\\\_        
+     _\///////\\\/////__\/\\\_______\/\\\__/\\\///////\\\____/\\\///////\\\_______/\\\///\\\____\/\\\\\\___\/\\\___________\/\\\////////\\\__\/\\\///////////____________\/\\\_______________/\\\\\\\\\\\\\________________/\\\////////__\/////\\\///__\///////\\\/////__\/\\\///////////______________/\\\/////////\\\___/\\\\\\\\\\\\\____________\/\\\////////\\\__\/\\\///////////________________/\\\////////__\/\\\_______\/\\\_       
+      _______\/\\\_______\/\\\_______\/\\\_\/\\\_____\/\\\___\/\\\_____\/\\\_____/\\\/__\///\\\__\/\\\/\\\__\/\\\___________\/\\\______\//\\\_\/\\\_______________________\/\\\______________/\\\/////////\\\_____________/\\\/_______________\/\\\___________\/\\\_______\/\\\________________________\//\\\______\///___/\\\/////////\\\___________\/\\\______\//\\\_\/\\\_________________________/\\\/___________\//\\\______/\\\__      
+       _______\/\\\_______\/\\\_______\/\\\_\/\\\\\\\\\\\/____\/\\\\\\\\\\\/_____/\\\______\//\\\_\/\\\//\\\_\/\\\___________\/\\\_______\/\\\_\/\\\\\\\\\\\_______________\/\\\_____________\/\\\_______\/\\\____________/\\\_________________\/\\\___________\/\\\_______\/\\\\\\\\\\\_________________\////\\\_________\/\\\_______\/\\\___________\/\\\_______\/\\\_\/\\\\\\\\\\\________________/\\\______________\//\\\____/\\\___     
+        _______\/\\\_______\/\\\_______\/\\\_\/\\\//////\\\____\/\\\//////\\\____\/\\\_______\/\\\_\/\\\\//\\\\/\\\___________\/\\\_______\/\\\_\/\\\///////________________\/\\\_____________\/\\\\\\\\\\\\\\\___________\/\\\_________________\/\\\___________\/\\\_______\/\\\///////_____________________\////\\\______\/\\\\\\\\\\\\\\\___________\/\\\_______\/\\\_\/\\\///////________________\/\\\_______________\//\\\__/\\\____    
+         _______\/\\\_______\/\\\_______\/\\\_\/\\\____\//\\\___\/\\\____\//\\\___\//\\\______/\\\__\/\\\_\//\\\/\\\___________\/\\\_______\/\\\_\/\\\_______________________\/\\\_____________\/\\\/////////\\\___________\//\\\________________\/\\\___________\/\\\_______\/\\\_______________________________\////\\\___\/\\\/////////\\\___________\/\\\_______\/\\\_\/\\\_______________________\//\\\_______________\//\\\/\\\_____   
+          _______\/\\\_______\//\\\______/\\\__\/\\\_____\//\\\__\/\\\_____\//\\\___\///\\\__/\\\____\/\\\__\//\\\\\\___________\/\\\_______/\\\__\/\\\_______________________\/\\\_____________\/\\\_______\/\\\____________\///\\\______________\/\\\___________\/\\\_______\/\\\________________________/\\\______\//\\\__\/\\\_______\/\\\___________\/\\\_______/\\\__\/\\\________________________\///\\\______________\//\\\\\______  
+           _______\/\\\________\///\\\\\\\\\/___\/\\\______\//\\\_\/\\\______\//\\\____\///\\\\\/_____\/\\\___\//\\\\\___________\/\\\\\\\\\\\\/___\/\\\\\\\\\\\\\\\___________\/\\\\\\\\\\\\\\\_\/\\\_______\/\\\______________\////\\\\\\\\\__/\\\\\\\\\\\_______\/\\\_______\/\\\\\\\\\\\\\\\___________\///\\\\\\\\\\\/___\/\\\_______\/\\\___________\/\\\\\\\\\\\\/___\/\\\\\\\\\\\\\\\______________\////\\\\\\\\\______\//\\\_______ 
+            _______\///___________\/////////_____\///________\///__\///________\///_______\/////_______\///_____\/////____________\////////////_____\///////////////____________\///////////////__\///________\///__________________\/////////__\///////////________\///________\///////////////______________\///////////_____\///________\///____________\////////////_____\///////////////__________________\/////////________\///________
+      
+      
+                                                                     =#                                    
+                                                                    =@@#                                   
+                                                                   -@@@@*                                  
+                                                                  :@@@@@@+                                 
+                             .=============.           :==========%@@@@@@@=                                
+                              #@@@@@@@@@@@+           :@@@@@@@@@@@@@@@@@@@@-                               
+                              .%@@@@@@@@@*           :@@@@@@@@@@@@@@@@@@@@@@-                              
+                               .%@@@@@@@#           :%@@@@@@@@@@@@@@@@@@@@@@#                              
+                                :@@@@@@%.          .%@@@@@@@@@@@@@@@@@@@@@*:                               
+                                 -@@@@%.          .%@@@@@@@@@@@@@@@@@@@%+.                                 
+                                  ----.          .#@@@@@@@@%-----------                                    
+                                                 #@@@@@@@@=                                                
+                                                *@@@@@@@#.                                                 
+                                               *@@@@@@%-                                                   
+                                              +@@@@@@*.                                                    
+                                             +@@@@@%:                                                      
+                                            =@@@@@+                                                        
+                                ...........=@@@@#.                                                         
+                               :%@@@@@@@@@@@@@%-                                                           
+                                .############*.  
+
+Este template fue editado por TURRON DE LA CITE SA DE CV // AGENCIA DE PUBLICIDAD // para más información contactar a través de tci.publicidad@hotmail.com -->
