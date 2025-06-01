@@ -17,7 +17,7 @@
   <body>
     <a href="https://wa.me/5563187420?text=Hola,%20quiero%20más%20información%20sobre%20miliunpasos"
       class="whatsapp" target="_blank">
-    <i class="fa-brands fa-whatsapp whatsapp-iconk">
+    <i class="fa-brands fa-whatsapp whatsapp-icon">
     </i>
     </a>
     <nav class="mobile-menu">
@@ -36,14 +36,11 @@
       </div>
     </nav>
 
-    
     <div class="container">
       <div class="column">
         <nav role="navigation" aria-label="Home">
           <a href="index.html" tabindex="0">← Regresar al sitio principal</a>
         </nav>
-
-
 
 <div class="promo-video-container" style="margin-bottom: 5px;">
     <video class="promo-video" autoplay loop muted playsinline>
@@ -84,7 +81,6 @@
   </div>
 </section>
 
-
 <h3 tabindex="0" class="titulo-c19" id="ficha-tecnica">
   <div>
     Adquiere tus boletos para <br>
@@ -94,7 +90,7 @@
 
   <div class="info-c19">
     <p><strong>Del 4 de julio al 3 de agosto</strong><br>
-    <strong>Funciones:</strong> Viernes 20 h, sábado 19 h, domingo 18 h</p>
+    <strong>Funciones:</strong> Viernes 20 h<br>sábado 19 h, domingo 18 h</p>
 
     <p><strong>Localidades:</strong> $205</p>
 
@@ -126,7 +122,6 @@
     <a href="https://maps.app.goo.gl/23CsVQhF1r9T2D149" id="mapa-taquilla" class="boton-mapa-taquilla" role="button" aria-label="Comprar entradas en taquilla" target="_blank" rel="noopener noreferrer">Comprar en Taquilla</a>
   </div>
 </h3>
-
 
 <section class="reviews-c19-section" id="reseñas-medios">
         <h2 class="reviews-c19-title">Reseñas de C19</h2>
@@ -193,8 +188,28 @@
             </div>
         </div>
     </section>
+    
+<div id="visor_fotos_proyectos">
 
+  <div class="linea_separadora_visor"></div>
 
+  <div id="contenedor_visor_fotos">
+    <div class="boton_navegacion_visor boton_izquierda_visor" onclick="foto_anterior_visor()">
+      <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    </div>
+    <img id="imagen_foto_proyecto" src="images/c19/c19_1.png" alt="Foto del proyecto">
+    <div class="boton_navegacion_visor boton_derecha_visor" onclick="foto_siguiente_visor()">
+      <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+  </div>
+
+  <div id="controles_visor">
+    <button class="boton_control_visor" onclick="alternar_autoplay_visor()" id="boton_autoplay_visor">⏸ Pausar</button>
+  </div>
+
+  <div class="linea_separadora_visor"></div>
+
+</div>
 
  <!-- CONTACTO -->
         <div class="button-stack" role="navigation" id="contacto">
