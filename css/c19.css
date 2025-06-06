@@ -1,3 +1,15 @@
+#c19-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subtitulo {
+  font-style: italic;
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
 .about-c19-section {
   background-color: #f5f5f5;
   padding: 1rem 1rem;
@@ -11,6 +23,7 @@
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease-out;
+  margin-bottom: 2rem;
 }
 
 .about-c19-block.visible {
@@ -30,11 +43,6 @@
 .about-c19-text {
   max-width: 600px;
   text-align: left;
-}
-
-.about-c19-text h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -83,7 +91,7 @@
     /* Mute/Unmute button */
     .mute-toggle {
       position: absolute;
-      bottom: 20px;
+      top: 20px;
       right: 20px;
       background: rgba(0, 0, 0, 0.7);
       color: #fff;
@@ -258,8 +266,6 @@
         font-size: var(--scale-1);
     }
 }
-
-
 
 
 

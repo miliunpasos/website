@@ -1,12 +1,3 @@
-  const container = document.getElementById('c19-header');
-  const img = document.createElement('img');
-  img.src = 'images/C19/header-c19.png';
-  img.alt = 'C19 Header';
-  img.style.width = '100%';
-  img.style.height = 'auto';
-  img.style.display = 'block';
-  container.appendChild(img);
-
 
   const blocks = document.querySelectorAll('.about-c19-block');
 

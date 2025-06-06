@@ -20,7 +20,7 @@
     /* Mute/Unmute button */
     .mute-toggle {
       position: absolute;
-      bottom: 20px;
+      top: 20px;
       right: 20px;
       background: rgba(0, 0, 0, 0.7);
       color: #fff;
