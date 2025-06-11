@@ -306,6 +306,16 @@
 
 }
 
+
+.logo-cabecera img,
+.logo-cabecera video {
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+}
+
+
+
 @media (max-width: 600px) {
   .cabecera-tarjeta {
     flex-direction: column;
@@ -320,7 +330,18 @@
   .titulo-cabecera {
     font-size: 1.2rem;
   }
+
+  .logo-cabecera img,
+  .logo-cabecera video {
+    height: 100px;
+  }
 }
+
+
+
+
+
+
 
 
 
@@ -404,3 +425,15 @@
       font-size: 1.2em;
     }
   }
+
+
+
+
+
+
+  .avatar img,
+.avatar video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

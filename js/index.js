@@ -1,59 +1,159 @@
-  const video = document.getElementById('videoAd');
-  const muteToggle = document.querySelector('.mute-toggle');
+// Configuración y constantes globales
+const CONFIG = {
+  paths: {
+    logo: 'images/logo.png',
+    animatedLogo: 'images/animated-logo.mp4',
+    adVideos: ['images/c19/ad_video1.mp4', 'images/c19/ad_video2.mp4']
+  },
+  plyrControls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
+};
 
-  const sources = [
-    'images/c19/ad_video1.mp4',
-    'images/c19/ad_video2.mp4'
-  ];
-  let currentVideo = 0;
+// Clase para manejar videos publicitarios
+class AdVideoPlayer {
+  constructor(videoElement, muteToggleElement) {
+    this.video = videoElement;
+    this.muteToggle = muteToggleElement;
+    this.currentVideoIndex = 0;
+    this.sources = CONFIG.paths.adVideos;
+    this.initializeEvents();
+  }
 
-  // Cambiar video al terminar el anterior
-  video.addEventListener('ended', () => {
-    currentVideo = (currentVideo + 1) % sources.length;
-    video.src = sources[currentVideo];
-    video.load();  // Cargar nuevo video
-    video.play();  // Reproducir nuevo video
-  });
+  initializeEvents() {
+    this.video.addEventListener('ended', () => this.playNextVideo());
+    this.muteToggle.addEventListener('click', () => this.toggleMute());
+    this.preventDefaultControls();
+  }
 
-  // Mute toggle
-  muteToggle.addEventListener('click', () => {
-    video.muted = !video.muted;
-    muteToggle.textContent = video.muted ? '🔇' : '🔊';
-    muteToggle.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
-  });
+  playNextVideo() {
+    this.currentVideoIndex = (this.currentVideoIndex + 1) % this.sources.length;
+    this.video.src = this.sources[this.currentVideoIndex];
+    this.video.load();
+    this.video.play();
+  }
 
-  // Prevención de controles nativos
-  video.addEventListener('contextmenu', e => e.preventDefault());
-  video.addEventListener('keydown', e => e.preventDefault());
+  toggleMute() {
+    this.video.muted = !this.video.muted;
+    this.muteToggle.textContent = this.video.muted ? '🔇' : '🔊';
+    this.muteToggle.setAttribute('aria-label', 
+      this.video.muted ? 'Unmute video' : 'Mute video');
+  }
 
+  preventDefaultControls() {
+    this.video.addEventListener('contextmenu', e => e.preventDefault());
+    this.video.addEventListener('keydown', e => e.preventDefault());
+  }
+}
 
+// Clase para manejar el video testimonial
+class TestimonialPlayer {
+  constructor(videoElement, overlayElement) {
+    this.video = videoElement;
+    this.overlay = overlayElement;
+    this.player = this.initializePlyr();
+    this.initializeEvents();
+  }
 
+  initializePlyr() {
+    return new Plyr(this.video, {
+      controls: CONFIG.plyrControls
+    });
+  }
 
+  initializeEvents() {
+    this.overlay.addEventListener('click', () => this.handleOverlayClick());
+    this.player.on('play', () => this.hideOverlay());
+    this.player.on('ended', () => this.showOverlay());
+  }
 
+  handleOverlayClick() {
+    this.player.play();
+    this.hideOverlay();
+  }
 
+  hideOverlay() {
+    this.overlay.style.display = 'none';
+  }
 
+  showOverlay() {
+    this.overlay.style.display = 'flex';
+  }
+}
+
+// Clase para manejar los logos animados
+class AnimatedLogo {
+  constructor(container, isHeader = false) {
+    this.container = container;
+    this.isHeader = isHeader;
+    this.isVideo = true;
+    this.initializeVideo();
+    this.initializeEvents();
+  }
+
+  initializeVideo() {
+    const dimensions = this.isHeader ? this.getCurrentDimensions() : {};
+    this.container.innerHTML = this.createVideoHTML(dimensions);
+  }
+
+  getCurrentDimensions() {
+    const element = this.container.querySelector('video, img');
+    return {
+      height: element.offsetHeight,
+      width: element.offsetWidth
+    };
+  }
+
+  createVideoHTML(dimensions = {}) {
+    const style = dimensions.height ? 
+      `style="height: ${dimensions.height}px; width: ${dimensions.width}px;"` : '';
+    return `
+      <video autoplay loop muted playsinline ${style}>
+        <source src="${CONFIG.paths.animatedLogo}" type="video/mp4">
+      </video>
+    `;
+  }
+
+  createImageHTML(dimensions = {}) {
+    const style = dimensions.height ? 
+      `style="height: ${dimensions.height}px; width: ${dimensions.width}px;"` : '';
+    return `
+      <img src="${CONFIG.paths.logo}" alt="Logo" ${style}>
+    `;
+  }
+
+  toggleMedia() {
+    const dimensions = this.isHeader ? this.getCurrentDimensions() : {};
+    this.container.innerHTML = this.isVideo ? 
+      this.createImageHTML(dimensions) : 
+      this.createVideoHTML(dimensions);
+    this.isVideo = !this.isVideo;
+  }
+
+  initializeEvents() {
+    this.container.addEventListener('click', () => this.toggleMedia());
+  }
+}
+
+// Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
-  const video = document.getElementById('video-testimonio');
-  const overlay = document.getElementById('overlay-testimonio');
+  // Inicializar video publicitario
+  const adPlayer = new AdVideoPlayer(
+    document.getElementById('videoAd'),
+    document.querySelector('.mute-toggle')
+  );
 
-  // Inicializa Plyr
-  const player = new Plyr(video, {
-    controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
-  });
+  // Inicializar video testimonial
+  const testimonialPlayer = new TestimonialPlayer(
+    document.getElementById('video-testimonio'),
+    document.getElementById('overlay-testimonio')
+  );
 
-  // Clic en el overlay: reproducir y ocultar el botón
-  overlay.addEventListener('click', () => {
-    player.play();
-    overlay.style.display = 'none';
-  });
-
-  // Oculta overlay si el usuario reproduce de otra forma
-  player.on('play', () => {
-    overlay.style.display = 'none';
-  });
-
-  // Muestra el botón de portada otra vez si termina
-  player.on('ended', () => {
-    overlay.style.display = 'flex';
-  });
+  // Inicializar logos animados
+  const avatarLogo = new AnimatedLogo(
+    document.getElementById('avatarContainer')
+  );
+  
+  const headerLogo = new AnimatedLogo(
+    document.getElementById('logoCabeceraContainer'),
+    true
+  );
 });
