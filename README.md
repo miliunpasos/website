@@ -1,2 +1,2 @@
 # miliunpasos
-Sitio web oficial del Laboratorio de creación e investigación donde se entrecruzan el lenguaje escénico y audiovisual. CDMX. 2025
+Sitio web oficial de la Compañía de Artes Escénicas Interdisciplinaria. CDMX. 2025

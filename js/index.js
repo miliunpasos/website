@@ -3,18 +3,18 @@ const CONFIG = {
   paths: {
     logo: 'images/logo.png',
     animatedLogo: 'images/animated-logo.mp4',
-    adVideos: ['images/c19/ad_video1.mp4', 'images/c19/ad_video2.mp4']
+    brandVideos: ['images/c19/brand_video1.mp4', 'images/c19/brand_video2.mp4']
   },
   plyrControls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
 };
 
-// Clase para manejar videos publicitarios
-class AdVideoPlayer {
+
+class BrandVideoPlayer {
   constructor(videoElement, muteToggleElement) {
     this.video = videoElement;
     this.muteToggle = muteToggleElement;
     this.currentVideoIndex = 0;
-    this.sources = CONFIG.paths.adVideos;
+    this.sources = CONFIG.paths.brandVideos;
     this.initializeEvents();
   }
 
@@ -136,8 +136,8 @@ class AnimatedLogo {
 // Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
   // Inicializar video publicitario
-  const adPlayer = new AdVideoPlayer(
-    document.getElementById('videoAd'),
+  const adPlayer = new BrandVideoPlayer(
+    document.getElementById('videoBrand'),
     document.querySelector('.mute-toggle')
   );
 

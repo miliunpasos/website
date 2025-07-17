@@ -1,4 +1,4 @@
-.video-ad-container {
+.video-brand-container {
       position: relative;
       width: 100%;
       max-width: 400px;
@@ -10,7 +10,7 @@
     }
 
     /* Video styling */
-    .video-ad {
+    .video-brand {
       width: 100%;
       height: auto;
       display: block;
@@ -43,7 +43,7 @@
 
     /* Ensure the video fits mobile screens */
     @media (max-width: 1080px) {
-      .video-ad-container {
+      .video-brand-container {
         width: 100%;
         height: auto;
       }
