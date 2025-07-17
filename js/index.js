@@ -136,7 +136,7 @@ class AnimatedLogo {
 // Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
   // Inicializar video publicitario
-  const adPlayer = new BrandVideoPlayer(
+  const brandPlayer = new BrandVideoPlayer(
     document.getElementById('videoBrand'),
     document.querySelector('.mute-toggle')
   );
