@@ -51,20 +51,29 @@
 }
 
 /* ==================== RESPONSIVE ==================== */
-@media (max-width: 300px) {
+@media (max-width: 600px) {
   .cabecera-tarjeta {
     flex-direction: column;
+    align-items: center; /* Centra los elementos hijos */
+    text-align: center;  /* Centra el texto */
     padding: 40px 20px 20px;
-  }
-
-  .titulo-catalogo {
-    font-size: 1rem;
+    gap: 16px; /* Espaciado limpio entre logo y título */
   }
 
   .logo-svg {
     width: 125px;
     height: 125px;
-    transform-origin: center;
+    flex-shrink: 0;
+  }
+
+  .titulo-catalogo {
+    font-size: 1.5rem;
+    white-space: normal; /* Permite saltos de línea naturales */
+    word-wrap: break-word; /* Permite romper palabras largas si es necesario */
+    overflow-wrap: break-word; /* Evita que palabras largas desborden */
+    hyphens: none; /* Evita la división silábica (no hyphenation) */
+    margin: 0;
+    line-height: 1.4; /* Mejora la legibilidad en múltiples líneas */
   }
 }
 
