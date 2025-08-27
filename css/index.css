@@ -51,7 +51,7 @@
 }
 
 /* ==================== RESPONSIVE ==================== */
-@media (max-width: 600px) {
+@media (max-width: 300px) {
   .cabecera-tarjeta {
     flex-direction: column;
     padding: 40px 20px 20px;
