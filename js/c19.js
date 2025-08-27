@@ -15,47 +15,6 @@
   window.addEventListener('load', revealOnScroll);
 
 
-  
-
-
-
-
-
-
-   // Get video and button elements
-    const video = document.querySelector('.promo-video');
-    const muteToggle = document.querySelector('.mute-toggle');
-
-    // Toggle mute/unmute
-    muteToggle.addEventListener('click', () => {
-      video.muted = !video.muted;
-      muteToggle.textContent = video.muted ? '🔇' : '🔊';
-      muteToggle.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
-    });
-
-    // Prevent right-click context menu on video
-    video.addEventListener('contextmenu', (e) => {
-      e.preventDefault();
-    });
-
-    // Prevent keyboard controls (spacebar, arrow keys, etc.)
-    video.addEventListener('keydown', (e) => {
-      e.preventDefault();
-    });
-
-    // Ensure video restarts if it ends (redundant with loop, but added for robustness)
-    video.addEventListener('ended', () => {
-      video.play();
-    });
-
-
-
-
-
-
-
-
-    
 let foto_actual_visor = 0;
 let autoplay_activo_visor = true;
 let intervalo_visor;

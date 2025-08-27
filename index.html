@@ -18,11 +18,14 @@
     <meta name="keywords" content="teatro, danza, fotografía, actores, actrices, escénico, reparto, guión, en vivo, cdmx, show, actos">
     <meta rel="canonical" href="https://miliunpasos.github.io/website/index.html">
     <meta name="miliunpasos" content="artes escénicas, CDMX, México">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    
   </head>
   <body>
     <a href="https://wa.me/5563187420?text=Hola,%20quiero%20más%20información%20sobre%20miliunpasos"
@@ -38,94 +41,200 @@
       <span class="menu-icon"></span>
       </button>
       <div class="menu-content" id="menuContent">
-        <a href="#">Inicio</a>
-        <a href="c19.html">C19 | Ecos de lo invisible</a>
         <a href="#cabecera-tarjeta">Sobre la Compañía</a>
+        <a href="#seccion-perfiles-sobre">Fundadores</a>
+        <a href="c19.html">C19 | Ecos de lo invisible</a>
+        <a href="s-vagabundo.html">Sueño Vagabundo</a>
         <a href="#contacto">Contacto</a>
       </div>
     </nav>
 
     <div class="container">
         <div class="column">
-            <!-- 
-              By default, the Avatar is rounded. Use the following:
-              - avatar--rounded: Automatically rounds the image
-              - avatar--soft: Slightly rounds the image
-              - avatar--none: Removes any rounding
-
-Mantén solo un elemento que cambiará entre imagen y video -->
-<div id="avatarContainer" class="avatar avatar--rounded">
-</div>
-
-            <!-- Add a short description about yourself or your brand -->
-            <p tabindex="0" style="margin-bottom: 80px; color: #7AB8FF">
-              Compañía de Artes Escénicas Interdisciplinaria 
-            </p>
- 
-              <h2 tabindex="0">
-              <div>PRÓXIMAS PRESENTACIONES</div>
-            </h2>
-
-<div class="video-brand-container" style="margin-bottom: 5px;">
-  <video id="videoBrand" class="video-brand" autoplay muted playsinline>
-    <source src="images/c19/brand_video1.mp4" type="video/mp4">
-    Tu navegador no soporta este formato de video.
-  </video>
-  <button class="mute-toggle" aria-label="Mute video">🔊</button>
-</div>
-
-  <h3 tabindex="0">
-<div>
-  Adquiere tus boletos para <br>
-  <span style="color: red;">C19 | Ecos de los invisible</span> <br>
-  Temporada en Teatro Helénico
-</div>
- <div class="tickets-container" style="margin-top: -30;">
-    <a href="https://teatrohelenico.comprarboletos.com/artes-escenicas/c19-144" id="compra-online" class="boton-compra-online" role="button" aria-label="Compra entradas online" target="_blank" rel="noopener noreferrer">Comprar Online</a>
-    <a href="https://maps.app.goo.gl/23CsVQhF1r9T2D149" id="mapa-taquilla" class="boton-mapa-taquilla" role="button" aria-label="Comprar entradas en taquilla" target="_blank" rel="noopener noreferrer">Taquilla</a>
-    <a href="c19.html" id="mas-informacion" class="boton-mas-informacion" role="button" aria-label="Más información">Más información</a>
-  </div>
-  </h3>
-
-
-<div class="brochure-s-vagabundo">
-  <div class="brochure-img">
-    <img src="images/s-vagabundo/teatreria_s-vagabundo.png" alt="Cartel Sueño Vagabundo">
-  </div>
-  <div class="brochure-content">
-    <h2>Sueño Vagabundo <br>en La Teatrería</h2>
-    <p>Del 5 al 26 de julio</p>
-    <p>Sábados · 01:30 p.m.</p>
-    <div class="brochure-buttons">
-      <a href="https://lateatreria.boletosenlinea.events/eventperformances.asp?evt=426" target="_blank" rel="noopener noreferrer">Comprar Online</a>
-      <a href="https://maps.app.goo.gl/27JPQuq1z5EpXv8QA" target="_blank" rel="noopener noreferrer">Taquilla</a>
-      <a href="images/s-vagabundo/carpeta_s-vagabundo.pdf" target="_blank" rel="noopener noreferrer">Más información</a>
-    </div>
-  </div>
-</div>
-
-<div class="video-canvas-testimonio">
-  <h3>Ver testimonio</h3>
-
-  <div class="video-wrapper-testimonio">
-    <div id="overlay-testimonio" class="video-overlay-testimonio"></div>
-    <video id="video-testimonio" class="plyr" playsinline>
-      <source src="images/s-vagabundo/testimonio_s-vagabundo.mp4" type="video/mp4" />
-      Tu navegador no soporta la etiqueta de video.
-    </video>
-  </div>
-</div>
 
 <div class="cabecera-tarjeta" id="cabecera-tarjeta">
-<div id="logoCabeceraContainer" class="logo-cabecera" style="margin-bottom: 10px;">
-  <img src="images/logo.png" alt="Logo de la compañía">
-</div>
-  <h1 class="titulo-cabecera" tabindex="0">SOBRE LA COMPAÑÍA</h1>
+  <div id="logoCabeceraContainer" class="logo-cabecera">
+      <!-- SVG optimizado: sin estilos en línea, clases para reutilización -->
+      <svg class="logo-svg" viewBox="0 0 100.5 100.5" aria-labelledby="logo-title" role="img">
+        <title id="logo-title">Logo de Miliun Pasos</title>
+        <circle id="circulo-blanco" cx="50.3" cy="50.3" r="50"/>
+        <path class="letra" d="M74.5,66.7c-0.1-0.1-0.1-0.1-0.1-0.2c0-0.1-0.1-0.2-0.1-0.3c0-0.1,0-0.1,0.1-0.2c0.1-0.1,0.2-0.1,0.3-0.1
+          c0.1,0,0.1,0,0.2,0s0.1,0.1,0.1,0.1c0,0.1,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.2,0.3c0.2,0.2,0.4,0.4,0.7,0.6c0.3,0.2,0.8,0.4,1.3,0.6
+          c0.5,0.2,1.1,0.3,1.8,0.3c0.4,0,0.7,0,0.9-0.1s0.2-0.2,0.2-0.5c0-0.2,0-0.3-0.1-0.5c-0.1-0.2-0.1-0.3-0.2-0.3l-4.6-5.5
+          c-0.2-0.3-0.4-0.7-0.6-1.1c-0.2-0.5-0.3-1-0.3-1.6c0-0.6,0.1-1.1,0.3-1.6c0.2-0.5,0.5-0.9,0.8-1.2s0.7-0.6,1.2-0.8
+          c0.4-0.2,0.9-0.3,1.4-0.4c0.3,0,0.6,0,0.8-0.1c0.2,0,0.4,0,0.6,0c0.5,0,1.1,0.1,1.6,0.2s1,0.2,1.4,0.4s0.7,0.3,1,0.5
+          c0.2,0.2,0.4,0.4,0.4,0.6c0,0.1,0,0.2-0.1,0.2s-0.2,0.1-0.2,0.1s-0.1,0-0.2-0.1c-0.1,0-0.1-0.1-0.1-0.1c-0.2-0.2-0.5-0.4-0.7-0.6
+          c-0.3-0.2-0.6-0.3-0.9-0.4s-0.6-0.2-1-0.2c-0.3,0-0.6,0-0.9,0c-0.2,0-0.3,0-0.4,0.1C79.1,54.8,79,55,79,55.2c0,0.2,0,0.4,0.1,0.6
+          c0.1,0.2,0.1,0.4,0.2,0.5c0.1,0.2,0.3,0.5,0.6,0.8c0.3,0.3,0.5,0.7,0.9,1.1c0.3,0.4,0.7,0.8,1,1.2c0.4,0.4,0.7,0.8,1,1.2
+          c0.3,0.4,0.6,0.7,0.8,1c0.2,0.3,0.4,0.5,0.5,0.7c0.1,0.2,0.2,0.4,0.3,0.6c0.1,0.2,0.2,0.4,0.2,0.7c0.1,0.3,0.1,0.6,0.1,0.9
+          c0,0.6-0.2,1.2-0.5,1.7s-0.7,0.9-1.1,1.2c-0.4,0.3-0.9,0.6-1.4,0.7c-0.5,0.2-0.9,0.3-1.2,0.3c-0.1,0-0.3,0.1-0.6,0.1
+          c-0.3,0-0.6,0-1,0c-0.7,0-1.3-0.1-1.9-0.2s-1-0.3-1.4-0.5c-0.4-0.2-0.7-0.5-1.1-0.8C74.6,66.8,74.5,66.7,74.5,66.7z"/>
+        <path class="letra" d="M73.5,57.3c0,1-0.2,1.9-0.6,2.8c-0.4,0.9-0.9,1.7-1.6,2.3S69.9,63.6,69,64c-0.9,0.4-1.8,0.6-2.8,0.6
+          c-1,0-1.9-0.2-2.8-0.5c-0.9-0.3-1.6-0.8-2.2-1.4s-1.1-1.4-1.5-2.2s-0.5-1.8-0.5-2.9c0-1,0.2-2,0.5-2.9c0.3-0.9,0.8-1.7,1.4-2.3
+          c0.6-0.7,1.4-1.2,2.2-1.6c0.9-0.4,1.8-0.6,2.9-0.6c1,0,1.9,0.2,2.8,0.6c0.9,0.4,1.6,0.9,2.3,1.5c0.7,0.6,1.2,1.4,1.6,2.3
+          C73.3,55.4,73.5,56.3,73.5,57.3z M66.2,63.9c0.3,0,0.6,0,0.8-0.1v-13c-0.1,0-0.3,0-0.4,0c-0.1,0-0.2,0-0.4,0c-1,0-1.9,0.2-2.7,0.5
+          c-0.8,0.3-1.5,0.8-2,1.4s-1,1.3-1.3,2.1c-0.3,0.8-0.5,1.7-0.5,2.6c0,1,0.2,1.9,0.5,2.7c0.3,0.8,0.8,1.5,1.4,2c0.6,0.6,1.3,1,2,1.3
+          C64.5,63.8,65.3,63.9,66.2,63.9z"/>
+        <path class="letra" d="M47.8,67c-0.1-0.1-0.1-0.1-0.1-0.2s-0.1-0.2-0.1-0.3c0-0.1,0-0.1,0.1-0.2c0.1-0.1,0.2-0.1,0.3-0.1c0.1,0,0.1,0,0.2,0
+          c0,0,0.1,0.1,0.1,0.1c0,0.1,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.2,0.3c0.2,0.2,0.4,0.4,0.7,0.6c0.3,0.2,0.8,0.4,1.3,0.6
+          c0.5,0.2,1.1,0.3,1.8,0.3c0.4,0,0.7,0,0.9-0.1s0.2-0.2,0.2-0.5c0-0.2,0-0.3-0.1-0.5c-0.1-0.2-0.1-0.3-0.2-0.3l-4.6-5.5
+          c-0.2-0.3-0.4-0.7-0.6-1.1s-0.3-1-0.3-1.6c0-0.6,0.1-1.1,0.3-1.6c0.2-0.5,0.5-0.9,0.8-1.2s0.7-0.6,1.2-0.8c0.4-0.2,0.9-0.3,1.4-0.4
+          c0.3,0,0.6,0,0.8-0.1c0.2,0,0.4,0,0.6,0c0.5,0,1.1,0.1,1.6,0.2s1,0.2,1.4,0.4s0.7,0.3,1,0.5c0.2,0.2,0.4,0.4,0.4,0.6
+          c0,0.1,0,0.2-0.1,0.2s-0.2,0.1-0.2,0.1s-0.1,0-0.2-0.1c-0.1,0-0.1-0.1-0.1-0.1c-0.2-0.2-0.5-0.4-0.7-0.6c-0.3-0.2-0.6-0.3-0.9-0.4
+          c-0.3-0.1-0.6-0.2-1-0.2c-0.3,0-0.6,0-0.9,0c-0.2,0-0.3,0-0.4,0.1c-0.1,0.1-0.2,0.2-0.2,0.4c0,0.2,0,0.4,0.1,0.6
+          c0.1,0.2,0.1,0.4,0.2,0.5c0.1,0.2,0.3,0.5,0.6,0.8c0.3,0.3,0.5,0.7,0.9,1.1s0.7,0.8,1,1.2s0.7,0.8,1,1.2c0.3,0.4,0.6,0.7,0.8,1
+          c0.2,0.3,0.4,0.5,0.5,0.7c0.1,0.2,0.2,0.4,0.3,0.6c0.1,0.2,0.2,0.4,0.2,0.7c0.1,0.3,0.1,0.6,0.1,0.9c0,0.6-0.2,1.2-0.5,1.7
+          s-0.7,0.9-1.1,1.2c-0.4,0.3-0.9,0.6-1.4,0.7c-0.5,0.2-0.9,0.3-1.2,0.3c-0.1,0-0.3,0.1-0.6,0.1c-0.3,0-0.6,0-1,0
+          c-0.7,0-1.3-0.1-1.9-0.2s-1-0.3-1.4-0.5c-0.4-0.2-0.7-0.5-1.1-0.8C47.9,67.2,47.9,67.1,47.8,67z"/>
+        <path class="letra" d="M38.5,50.9c0,0,0.1-0.1,0.1-0.1c0,0,0.1-0.1,0.1-0.1c0,0,0.1,0,0.2,0c0.1,0,0.2,0.1,0.3,0.2c0,0.1,0.1,0.1,0.1,0.1
+          l7.6,13.6h-6.7l-1-1.8h-6.5l-0.5,0.9C32,63.7,32,63.8,31.9,64c-0.1,0.1-0.1,0.3-0.2,0.3c-0.1,0.1-0.1,0.2-0.2,0.2
+          c-0.1,0-0.1,0.1-0.3,0.1c-0.1,0-0.2,0-0.2-0.1S31,64.3,31,64.2c0-0.1,0-0.2,0.1-0.3c0.1-0.2,0.3-0.5,0.5-1c0.3-0.5,0.6-1,0.9-1.7
+          s0.8-1.3,1.2-2.1c0.4-0.8,0.9-1.5,1.3-2.3c0.4-0.8,0.9-1.5,1.3-2.2c0.4-0.7,0.8-1.4,1.1-1.9c0.3-0.6,0.6-1,0.8-1.4
+          C38.4,51.1,38.5,50.9,38.5,50.9z M33,61.9h5.8l-2.8-5.2L33,61.9z"/>
+        <path class="letra" d="M17.1,54.3h6.7c0.8,0,1.6,0.1,2.4,0.3c0.8,0.2,1.5,0.5,2.2,1c0.6,0.5,1.2,1,1.5,1.8c0.4,0.7,0.6,1.6,0.6,2.6
+          c0,1.1-0.2,2-0.6,2.7c-0.4,0.7-0.9,1.3-1.5,1.7c-0.6,0.4-1.3,0.7-2,0.9c-0.7,0.2-1.5,0.3-2.2,0.3c-0.4,0-0.9,0-1.4-0.1v2.4h-5.9
+          V54.3z M23,54.9v10c0.4,0.1,0.8,0.1,1,0.2s0.4,0,0.6,0c0.6,0,1.3-0.1,1.9-0.3c0.6-0.2,1.2-0.5,1.7-0.9s0.9-0.9,1.2-1.6
+          c0.3-0.6,0.5-1.4,0.5-2.4c0-0.9-0.2-1.7-0.6-2.3c-0.4-0.6-0.8-1.2-1.4-1.6s-1.2-0.7-2-0.9s-1.5-0.3-2.2-0.3H23z"/>
+        <path class="letra" d="M75.3,36.2c0,0,0.1,0,0.2,0s0.1,0,0.2,0.1l11.4,6.5v-5.3c0-0.2,0-0.3,0-0.5s0-0.3,0-0.4c0-0.3,0.1-0.4,0.4-0.4
+          c0.2,0,0.3,0.1,0.3,0.4c0,0.1,0,0.2,0,0.4c0,0.2,0,0.4,0,0.6v12c0,0.2-0.1,0.2-0.2,0.2c-0.1,0-0.2,0-0.4-0.1L75.7,43v5.2
+          c0,0.2,0,0.4,0,0.6c0,0.2,0,0.4,0,0.6c0,0.3-0.1,0.4-0.4,0.4c-0.1,0-0.2,0-0.2-0.1S75,49.6,75,49.5c0-0.2,0-0.4,0-0.8
+          c0-0.3,0-0.6,0-0.8V36.5C75.1,36.3,75.2,36.2,75.3,36.2z"/>
+        <path class="letra" d="M72.5,32.1c0.1,0,0.2,0,0.2,0h0.1c0.1,0,0.1,0,0.2,0.1c0.1,0.1,0.1,0.1,0.1,0.2c0,0.1,0,0.4-0.1,0.9S73,34.3,73,35
+          v5.4c0,0.6-0.1,1.2-0.2,1.9c-0.1,0.7-0.4,1.3-0.8,1.8s-1,1-1.8,1.4c-0.8,0.4-1.8,0.6-3,0.6c-1,0-1.9,0-2.6-0.1
+          c-0.7-0.1-1.4-0.2-1.9-0.4c-0.7-0.3-1.2-0.6-1.5-1c-0.4-0.4-0.6-0.8-0.8-1.2c-0.2-0.4-0.3-0.8-0.3-1.2s0-0.7,0-1V32h5.9v13.5
+          c0.2,0,0.4,0,0.6,0c0.2,0,0.4,0,0.6,0c0.6,0,1.3-0.1,2-0.2c0.7-0.1,1.3-0.4,1.8-0.9c0.3-0.3,0.6-0.6,0.8-1c0.2-0.4,0.3-0.7,0.4-1.1
+          c0.1-0.4,0.2-0.7,0.2-1c0-0.3,0-0.6,0-0.8v-8C72.3,32.2,72.4,32.1,72.5,32.1z"/>
+        <path class="letra" d="M52,36.3h5.9v13.6H52V36.3z"/>
+        <path class="letra" d="M37.9,32.1h5.9v13c0.2,0,0.4,0,0.7,0c0.3,0,0.7,0,1.2,0c1.2,0,2.1,0,2.7-0.1c0.6,0,1-0.1,1.2-0.1c0.1,0,0.2,0,0.3,0
+          c0.1,0,0.2,0.1,0.2,0.3c0,0.2-0.1,0.3-0.3,0.3s-0.6,0.1-1.2,0.1c-0.3,0-0.5,0-0.9,0s-0.7,0-1,0c-0.3,0-0.6,0-0.9,0s-0.4,0-0.5,0
+          h-7.5V32.1z"/>
+        <path class="letra" d="M29.7,36.3h5.9v13.6h-5.9V36.3z"/>
+        <path class="letra" d="M23.9,31.7c0.1,0,0.1,0,0.2,0.1c0,0.1,0.1,0.1,0.1,0.2l4.1,13.6h-5.9l-2.1-7.1l-3.6,5.7c0,0-0.1,0.1-0.1,0.2
+          s-0.1,0.1-0.2,0.1c-0.1,0-0.1,0-0.1-0.1S16,44.4,16,44.4l-4-5.6l-0.9,3.4c-0.2,0.7-0.3,1.2-0.4,1.7c-0.1,0.4-0.2,0.8-0.2,1.1
+          s-0.1,0.5-0.2,0.6c-0.1,0.1-0.2,0.2-0.3,0.2H9.8c-0.1,0-0.1,0-0.2,0s-0.1-0.1-0.1-0.2c0-0.1,0.1-0.3,0.2-0.6s0.2-0.8,0.4-1.4l3-11.4
+          c0.1-0.2,0.2-0.4,0.3-0.4c0.1,0,0.2,0,0.2,0.1l5.2,7.5l4.8-7.5C23.7,31.8,23.8,31.7,23.9,31.7z"/>
+      </svg>
+  </div>
+  <h1 class="titulo-catalogo" tabindex="0">SOBRE LA COMPAÑÍA</h1>
 </div>
 
-<p style="font-size: medium; color: #7AB8FF;">
-  "Serendib" y "Sueño Vagabundo" son proyectos anteriores de la Compañía con los que se ha destacado en festivales nacionales e internacionales además de consolidarse como un referente en el ámbito de las artes escénicas en México.
-</p>
+<!-- Texto introductorio -->
+<div id="intro-sobre-container" class="texto-intro-sobre">
+  <p>
+    Miliun Pasos es una compañía interdisciplinaria de creación e investigación donde se entrecruzan el lenguaje escénico y audiovisual.
+    Su trabajo ha sido seleccionado en festivales internacionales de cinedanza (México, Islandia, Perú) y han sido becarios de programas 
+    nacionales como “México: Encuentro de las Artes Escénicas” (2020) y FONCA (2023). Su propuesta explora el contexto histórico-social 
+    actual, sin dejar de lado la capacidad de soñar en cualquier lugar.
+  </p>
+</div>
+
+
+
+
+
+
+<!-- Sección Catálogo de Obras Escénicas -->
+<section id="seccion-catalogo-obras" class="catalogo-obras-seccion">
+  <div class="contenedor-titulo-catalogo">
+    <h2 class="titulo-catalogo">CATÁLOGO DE OBRAS ESCÉNICAS</h2>
+  </div>
+
+  <div class="grid-banners-catalogo">
+    
+    <!-- Botón-Banner: C19 -->
+    <a href="c19.html" class="banner-brochure" id="banner-c19" target="_self" aria-label="Ver obra C19">
+      <img src="images/c19/guantes.png" alt="Cartel de la obra C19" class="imagen-brochure" />
+      <div class="flecha-brochure">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+    </a>
+
+    <!-- Botón-Banner: Sueño Vagabundo -->
+    <a href="s-vagabundo.html" class="banner-brochure" id="banner-sv" target="_self" aria-label="Ver obra Sueño Vagabundo">
+      <img src="images/s-vagabundo/sv-cover.png" alt="Cartel de la obra Sueño Vagabundo" class="imagen-brochure" />
+      <div class="flecha-brochure">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+
+
+  <div class="contenedor-titulo-perfiles">
+    <h2 class="titulo-catalogo">FUNDADORES</h2>
+  </div>
+
+
+<!-- Fondo SVG geométrico animado -->
+<svg id="svg-geometrico-sobre" viewBox="0 0 1440 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Patrón de puntos sutiles -->
+    <pattern id="dots-sobre" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#7AB8FF" opacity="0.1" />
+    </pattern>
+    <!-- Gradiente para líneas -->
+    <linearGradient id="grad-linea-sobre" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7AB8FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7AB8FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Fondo con patrón -->
+  <rect width="100%" height="100%" fill="url(#dots-sobre)" />
+  <!-- Líneas y formas animadas -->
+  <g id="animaciones-geometricas-sobre"></g>
+</svg>
+
+<!-- Sección de perfiles -->
+<section id="seccion-perfiles-sobre" class="seccion-perfiles">
+  <div class="perfil-grid-sobre">
+
+    <!-- Perfil: Emmanuel Fragoso Jaime -->
+    <div class="tarjeta-perfil-sobre" data-perfil="emmanuel">
+      <img src="images/emmanuel.jpg" alt="Emmanuel Fragoso Jaime" class="foto-perfil-sobre">
+      <div class="contenido-perfil-sobre">
+        <h3>Emmanuel Fragoso Jaime</h3>
+        <p class="cargo-perfil">Director y Coreógrafo</p>
+        <div class="bio-perfil">
+          <p>
+            Comunicólogo, productor y creador escénico mexicano. Ha participado en festivales nacionales e internacionales, 
+            fue seleccionado por “México en Escena” (CENART, 2009) y residente en “La Granja Centro de Arte” (2010). 
+            Director de Miliun Pasos, sus cinedanzas han sido seleccionadas en festivales de México (2020) Islandia (2021) y Perú (2022). 
+            Becario del SACPC en múltiples ocasiones: “Creadores Escénicos B” (2017–2018), “México: Encuentro de Artes Escénicas” (2020) 
+            y “Fomento a Proyectos y Coinversiones Culturales” (2023–2024).
+          </p>
+        </div>
+        <a href="https://instagram.com/emmanuel_fragoso_j" target="_blank" class="btn-perfil-sobre" id="btn-emmanuel">
+          <i class="fab fa-instagram"></i> @emmanuel_fragoso_j
+        </a>
+      </div>
+    </div>
+
+    <!-- Perfil: Ernesto Mendoza -->
+    <div class="tarjeta-perfil-sobre" data-perfil="ernesto">
+      <img src="images/ernesto.jpg" alt="Ernesto Mendoza" class="foto-perfil-sobre">
+      <div class="contenido-perfil-sobre">
+        <h3>Ernesto Mendoza</h3>
+        <p class="cargo-perfil">Productor Audiovisual y Artista Visual</p>
+        <div class="bio-perfil">
+          <p>
+            Artista visual especializado en Fotografía Experimental, Maestro en Artes Visuales por la UNAM (2020). 
+            Co-fundador de Miliun Pasos, compañía acreedora al FONCA en danza (2022). Cofundador y fotógrafo en cinedanzas 
+            seleccionadas en festivales de México (2020) Islandia (2021) y Perú (2022). Ganador del Premio Nacional de Ensayo 
+            sobre Fotografía (Centro de la Imagen, 2021). Parte del directorio PICS (2024) y ganador del Festival Amalgama (2022). 
+            Invitado al Festival Internacional de Fotografía Experimental en Barcelona (2023). Actualmente doctorando en Artes Visuales (UNAM, 2024).
+          </p>
+        </div>
+        <a href="https://instagram.com/ermendoza" target="_blank" class="btn-perfil-sobre" id="btn-ernesto">
+          <i class="fab fa-instagram"></i> @ermendoza
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <div class="twitter_contenedor_responsivo" style="margin-bottom: 50px;">
   <blockquote class="twitter-tweet" data-media-max-width="560">
@@ -137,11 +246,13 @@ Mantén solo un elemento que cambiará entre imagen y video -->
   </blockquote>
 </div>
 
-<div style="width: 100%; max-width: 900px; margin: 0 auto; margin-bottom: 60px;">
-<iframe src="https://docs.google.com/gview?url=https://miliunpasos.github.io/website/images/s-vagabundo/trayectoria_s-vagabundo.pdf&embedded=true" style="width:100%; height:600px;" frameborder="0"></iframe>
-</div>
-
         <!-- CONTACTO -->
+
+  <div class="contenedor-titulo-CONTACTO" style="margin-bottom: 25px;">
+    <h2 class="titulo-catalogo">SÍGUENOS PARA INFORMACIÓN SOBRE PRESENTACIONES</h2>
+  </div>
+
+
         <div class="button-stack" role="navigation" id="contacto">
           <!-- Instagram -->
           <a class="button button-instagram" href="https://www.instagram.com/miliunpasos" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/instagram.svg" alt="Instagram Logo">Instagram</a>

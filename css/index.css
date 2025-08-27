@@ -1,345 +1,437 @@
-.video-brand-container {
-      position: relative;
-      width: 100%;
-      max-width: 400px;
-      margin: 0 auto;
-      overflow: hidden;
-      background: #000; /* Fallback background */
-      border-radius: 8px; /* Native ad aesthetic */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Video styling */
-    .video-brand {
-      width: 100%;
-      height: auto;
-      display: block;
-      pointer-events: none; /* Prevent interaction with video controls */
-    }
-
-    /* Mute/Unmute button */
-    .mute-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-      transition: background 0.3s;
-    }
-
-    .mute-toggle:hover {
-      background: rgba(0, 0, 0, 0.9);
-    }
-
-    /* Ensure the video fits mobile screens */
-    @media (max-width: 1080px) {
-      .video-brand-container {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-
-
-
-
-
-    /* Existing styles for tickets-container and other buttons (simplified) */
-    .tickets-container {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .boton-compra-online,
-    .boton-mapa-taquilla {
-      display: inline-block;
-      padding: 12px 24px;
-      border: 2px solid #fff;
-      border-radius: 25px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      background: transparent;
-    }
-
-    .boton-compra-online:hover,
-    .boton-mapa-taquilla:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-    }
-
-    .boton-compra-online:active,
-    .boton-mapa-taquilla:active {
-      background: #fff;
-      color: #000;
-    }
-
-    .boton-compra-online:focus,
-    .boton-mapa-taquilla:focus {
-      outline: 2px solid #fff;
-      outline-offset: 2px;
-    }
-
-    /* Corrected and specific styles for boton-mas-informacion */
-    .tickets-container .boton-mas-informacion {
-      display: inline-block;
-      padding: 14px 28px; /* Slightly larger for distinction */
-      border: 2px solid #000; /* Black border */
-      border-radius: 30px; /* More rounded for uniqueness */
-      color: #000 !important; /* Black text, high priority */
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 700; /* Bolder font for emphasis */
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      background: #fff; /* White background */
-    }
-
-    .tickets-container .boton-mas-informacion:hover {
-      background: #e0e0e0; /* Light gray hover for contrast */
-      color: #000 !important; /* Ensure black text */
-    }
-
-    .tickets-container .boton-mas-informacion:active {
-      background: #ccc; /* Darker gray on click */
-      color: #000 !important; /* Ensure black text */
-    }
-
-    .tickets-container .boton-mas-informacion:focus {
-      outline: 2px solid #fff;
-      outline-offset: 2px;
-    }
-
-    /* Responsive design */
-    @media (max-width: 600px) {
-      .tickets-container {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .boton-compra-online,
-      .boton-mapa-taquilla,
-      .tickets-container .boton-mas-informacion {
-        width: 100%;
-        max-width: 300px;
-        padding: 10px;
-        font-size: 14px;
-      }
-    }
-
-
-
-
-
-
-
-
-    .brochure-s-vagabundo {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 60px auto;
-  border: 2px solid #d29109;
-  border-radius: 12px;
-  overflow: hidden;
-  font-family: 'B612', sans-serif;
-}
-
-.brochure-img {
-  flex: 1 1 40%;
-  min-width: 280px;
-  background-color: #000;
-  /* Para que la imagen mantenga su proporción y no se corte */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.brochure-img img {
-  width: 100%;
-  height: auto;          /* Cambié de 100% a auto para mantener proporción */
-  object-fit: contain;   /* Cambié de cover a contain para que no se corte */
-  display: block;
-}
-
-.brochure-content {
-  flex: 1 1 60%;
-  background-color: #fff;
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.brochure-content h2 {
-  color: #020202;
-  font-size: 1.8em;
-  margin-bottom: 10px;
-}
-
-.brochure-content p {
-  color: #444;
-  font-size: 1em;
-  margin: 6px 0;
-}
-
-.brochure-buttons {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.brochure-buttons a {
-  text-decoration: none;
-  background-color: #d29109;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-size: 0.95em;
-  transition: background-color 0.3s ease;
-  flex: 1 1 auto;
-  max-width: 200px;
-  text-align: center;
-}
-
-.brochure-buttons a:hover {
-  background-color: #b47b07;
-}
-
-
-
-@media (max-width: 600px) {
-  .brochure-s-vagabundo {
-    flex-direction: column;
-    align-items: stretch; /* Permite que la imagen use todo el alto disponible */
-  }
-
-  .brochure-img,
-  .brochure-content {
-    flex: 1 1 100%;
-  }
-
-  .brochure-content {
-    padding: 25px 15px;
-  }
-
-  .brochure-buttons {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center; /* Centra los botones */
-  }
-
-  .brochure-buttons a {
-    width: 100%;
-    max-width: 300px;
-    flex: none;
-  }
-
-  .brochure-img img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
+/* ==================== CABECERA ==================== */
 .cabecera-tarjeta {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos pasen a otra línea en pantallas pequeñas */
   align-items: center;
-  gap: 20px;
-  padding: 20px 30px;
-  border-radius: 20px;
   justify-content: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 20px;
+  padding: 60px 20px 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.logo-cabecera {
-  height: 150px;
-  width: auto;
-  max-width: 100%;
-}
-
-.titulo-cabecera {
+.titulo-catalogo {
   margin: 0;
   color: #7AB8FF;
-  font-size: x-large;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 700;
   text-align: center;
-  word-break: normal;
-  hyphens: none;
-
 }
 
-
-.logo-cabecera img,
-.logo-cabecera video {
-  height: 150px;
-  width: auto;
-  max-width: 100%;
+/* ==================== LOGO SVG ==================== */
+.logo-cabecera {
+  flex-shrink: 0;
 }
 
+.logo-svg {
+  width: 200px;
+  height: 200px;
+  animation: brujulaSuave 7s ease-in-out infinite alternate !important;
+  transform-origin: center !important;
+  will-change: transform;
+}
 
+/* ==================== ANIMACIÓN BRÚJULA ==================== */
+@keyframes brujulaSuave {
+  0% { transform: rotate(-8deg); }
+  25% { transform: rotate(12deg); }
+  50% { transform: rotate(-360.1deg); }
+  75% { transform: rotate(360.1deg); }
+  100% { transform: rotate(8deg); }
+}
 
+/* ==================== ESTILOS SVG ==================== */
+#circulo-blanco {
+  fill: #F7F7F7;
+  stroke: #020202;
+  stroke-width: 0.5;
+}
+
+.letra {
+  fill: #020202;
+}
+
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 600px) {
   .cabecera-tarjeta {
     flex-direction: column;
-    text-align: center;
-    padding: 20px;
+    padding: 40px 20px 20px;
   }
 
-  .logo-cabecera {
-    height: 100px;
+  .titulo-catalogo {
+    font-size: 1.5rem;
   }
 
-  .titulo-cabecera {
-    font-size: 1.2rem;
-  }
-
-  .logo-cabecera img,
-  .logo-cabecera video {
-    height: 100px;
+  .logo-svg {
+    width: 125px;
+    height: 125px;
+    transform-origin: center;
   }
 }
 
 
 
 
+/* Texto introductorio */
+.texto-intro-sobre {
+  max-width: 800px;
+  margin: 20px auto 60px;
+  padding: 0 20px;
+  text-align: center;
+  color: #B0C4DE;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.texto-intro-sobre p {
+  margin: 0;
+}
+
+/* SVG Geométrico */
+#svg-geometrico-sobre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.12;
+}
+
+/* Formas animadas */
+.forma-geometrica-linea {
+  stroke: #7AB8FF;
+  stroke-width: 1;
+  stroke-dasharray: 15, 10;
+  opacity: 0;
+  animation: desvanecerLinea 7s infinite ease-in-out;
+}
+
+.forma-geometrica-triangulo {
+  fill: #7AB8FF;
+  opacity: 0.1;
+  animation: flotarTriangulo 9s infinite ease-in-out;
+}
+
+@keyframes desvanecerLinea {
+  0% { opacity: 0; stroke-dashoffset: 50; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateX(30px); }
+}
+
+@keyframes flotarTriangulo {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  50% { opacity: 0.2; }
+  100% { transform: translateY(-50px) rotate(15deg); opacity: 0; }
+}
+
+
+
+
+
+
+
+/* === SECCIÓN CATÁLOGO DE OBRAS - ESTILO BROCHURE (proporción 5:4) === */
+#seccion-catalogo-obras {
+  position: relative;
+  z-index: 10;
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contenedor-titulo-catalogo {
+  margin-bottom: 60px;
+}
+
+.titulo-catalogo {
+  font-size: 1.8rem;
+  color: #7AB8FF;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-catalogo::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #7AB8FF;
+  border-radius: 2px;
+}
+
+/* Grid de banners tipo brochure */
+.grid-banners-catalogo {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Banner estilo brochure */
+.banner-brochure {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px; /* igual al ancho de tu imagen */
+  aspect-ratio: 5 / 4; /* 500x400 → 5:4 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  display: block;
+  background: #fff;
+}
+
+.banner-brochure:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del brochure */
+.imagen-brochure {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin deformar */
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.banner-brochure:hover .imagen-brochure {
+  transform: scale(1.02); /* Zoom muy suave */
+}
+
+/* Flecha decorativa */
+.flecha-brochure {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: rgba(122, 184, 255, 0.95);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner-brochure:hover .flecha-brochure {
+  opacity: 1;
+}
+
+/* Animación de entrada */
+.banner-brochure {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: subirBrochure 0.7s ease forwards;
+}
+
+#banner-c19 { animation-delay: 0.3s; }
+#banner-sv { animation-delay: 0.5s; }
+
+@keyframes subirBrochure {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE: Ajuste para móviles === */
+@media (max-width: 768px) {
+  .grid-banners-catalogo {
+    /* Mantén horizontal si el ancho lo permite */
+    flex-direction: row; /* Cambiado: antes era column */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .banner-brochure {
+    max-width: 100%;
+    /* Ajusta el tamaño máximo al ancho del contenedor */
+    width: 100%;
+    aspect-ratio: 5 / 4; /* Mantiene proporción 5:4 */
+  }
+
+  /* Si el dispositivo es muy angosto, pasa a columna */
+  @media (max-width: 500px) {
+    .grid-banners-catalogo {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .flecha-brochure {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .titulo-catalogo {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Sección perfiles */
+#seccion-perfiles-sobre {
+  position: relative;
+  z-index: 10;
+  padding: 100px 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.perfil-grid-sobre {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.tarjeta-perfil-sobre {
+  background: rgba(20, 20, 30, 0.8);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 340px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecerTarjeta 0.8s ease forwards;
+}
+
+.tarjeta-perfil-sobre:nth-child(1) { animation-delay: 0.4s; }
+.tarjeta-perfil-sobre:nth-child(2) { animation-delay: 0.6s; }
+
+@keyframes aparecerTarjeta {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tarjeta-perfil-sobre:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 35px rgba(122, 184, 255, 0.2);
+}
+
+.foto-perfil-sobre {
+  width: 100%;
+  height: 220px;
+  object-fit: scale-down;
+  border-bottom: 3px solid #7AB8FF;
+}
+
+.contenido-perfil-sobre {
+  padding: 24px;
+  text-align: left;
+}
+
+.contenido-perfil-sobre h3 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.cargo-perfil {
+  color: #7AB8FF;
+  font-size: 0.95em;
+  font-weight: 500;
+  margin: 0 0 14px;
+}
+
+.bio-perfil {
+  color: #ddd;
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+.bio-perfil p {
+  margin: 0 0 8px;
+}
+
+.bio-perfil p:last-child {
+  margin-bottom: 0;
+}
+
+/* Botones Instagram */
+.btn-perfil-sobre {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: transparent;
+  border: 1px solid #7AB8FF;
+  color: #7AB8FF;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: subirBoton 0.7s ease forwards;
+}
+
+#btn-emmanuel { animation-delay: 1.0s; }
+#btn-ernesto { animation-delay: 1.2s; }
+
+@keyframes subirBoton {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-perfil-sobre:hover {
+  background: #7AB8FF;
+  color: #000;
+  box-shadow: 0 4px 15px rgba(122, 184, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .perfil-grid-sobre {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-perfil-sobre {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .cabecera-tarjeta,
+  .texto-intro-sobre {
+    padding: 0 16px;
+  }
+
+  #seccion-perfiles-sobre {
+    padding: 80px 16px 60px;
+  }
+}
 
 
 
@@ -362,78 +454,3 @@
   border: none;
 }
 
-
-
-
-
-  .video-canvas-testimonio {
-    max-width: 700px;
-    margin: 60px auto;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 12px;
-    text-align: center;
-    font-family: 'B612', sans-serif;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .video-canvas-testimonio h3 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    color: #020202;
-  }
-
-  .video-wrapper-testimonio {
-    position: relative;
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .video-overlay-testimonio {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(2, 2, 2, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-    transition: opacity 0.3s ease;
-  }
-
-  .video-overlay-testimonio::before {
-    content: "▶";
-    font-size: 70px;
-    color: white;
-  }
-
-  video.plyr {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  @media (max-width: 600px) {
-    .video-canvas-testimonio {
-      padding: 15px;
-    }
-
-    .video-canvas-testimonio h3 {
-      font-size: 1.2em;
-    }
-  }
-
-
-
-
-
-
-  .avatar img,
-.avatar video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}

@@ -1,159 +1,52 @@
-// Configuración y constantes globales
-const CONFIG = {
-  paths: {
-    logo: 'images/logo.png',
-    animatedLogo: 'images/animated-logo.mp4',
-    brandVideos: ['images/c19/brand_video1.mp4', 'images/c19/brand_video2.mp4']
-  },
-  plyrControls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
-};
+function generarFormasGeometricas() {
+  const contenedor = document.getElementById("animaciones-geometricas-sobre");
+  const colors = ["#7AB8FF", "#5A9BDF"];
 
+  // Crear líneas
+  for (let i = 0; i < 6; i++) {
+    const x1 = Math.random() * 1400;
+    const x2 = x1 + 150 + Math.random() * 100;
+    const y = 100 + Math.random() * 300;
+    const delay = Math.random() * 6;
 
-class BrandVideoPlayer {
-  constructor(videoElement, muteToggleElement) {
-    this.video = videoElement;
-    this.muteToggle = muteToggleElement;
-    this.currentVideoIndex = 0;
-    this.sources = CONFIG.paths.brandVideos;
-    this.initializeEvents();
+    const linea = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    linea.setAttribute("x1", x1);
+    linea.setAttribute("y1", y);
+    linea.setAttribute("x2", x2);
+    linea.setAttribute("y2", y);
+    linea.setAttribute("class", "forma-geometrica-linea");
+    linea.style.stroke = colors[Math.floor(Math.random() * colors.length)];
+    linea.style.animationDelay = delay + "s";
+
+    contenedor.appendChild(linea);
   }
 
-  initializeEvents() {
-    this.video.addEventListener('ended', () => this.playNextVideo());
-    this.muteToggle.addEventListener('click', () => this.toggleMute());
-    this.preventDefaultControls();
-  }
+  // Crear triángulos
+  for (let i = 0; i < 5; i++) {
+    const poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+    const size = Math.random() * 12 + 8;
+    const x = Math.random() * 1300 + 50;
+    const y = Math.random() * 350 + 100;
+    const rot = Math.random() * 360;
+    const delay = Math.random() * 8;
 
-  playNextVideo() {
-    this.currentVideoIndex = (this.currentVideoIndex + 1) % this.sources.length;
-    this.video.src = this.sources[this.currentVideoIndex];
-    this.video.load();
-    this.video.play();
-  }
+    poly.setAttribute("points", "0,0 10,17 20,0");
+    poly.setAttribute("class", "forma-geometrica-triangulo");
+    poly.setAttribute("transform", `translate(${x}, ${y}) scale(${size / 10}) rotate(${rot})`);
+    poly.style.animationDelay = delay + "s";
 
-  toggleMute() {
-    this.video.muted = !this.video.muted;
-    this.muteToggle.textContent = this.video.muted ? '🔇' : '🔊';
-    this.muteToggle.setAttribute('aria-label', 
-      this.video.muted ? 'Unmute video' : 'Mute video');
-  }
-
-  preventDefaultControls() {
-    this.video.addEventListener('contextmenu', e => e.preventDefault());
-    this.video.addEventListener('keydown', e => e.preventDefault());
+    contenedor.appendChild(poly);
   }
 }
 
-// Clase para manejar el video testimonial
-class TestimonialPlayer {
-  constructor(videoElement, overlayElement) {
-    this.video = videoElement;
-    this.overlay = overlayElement;
-    this.player = this.initializePlyr();
-    this.initializeEvents();
-  }
-
-  initializePlyr() {
-    return new Plyr(this.video, {
-      controls: CONFIG.plyrControls
-    });
-  }
-
-  initializeEvents() {
-    this.overlay.addEventListener('click', () => this.handleOverlayClick());
-    this.player.on('play', () => this.hideOverlay());
-    this.player.on('ended', () => this.showOverlay());
-  }
-
-  handleOverlayClick() {
-    this.player.play();
-    this.hideOverlay();
-  }
-
-  hideOverlay() {
-    this.overlay.style.display = 'none';
-  }
-
-  showOverlay() {
-    this.overlay.style.display = 'flex';
-  }
-}
-
-// Clase para manejar los logos animados
-class AnimatedLogo {
-  constructor(container, isHeader = false) {
-    this.container = container;
-    this.isHeader = isHeader;
-    this.isVideo = true;
-    this.initializeVideo();
-    this.initializeEvents();
-  }
-
-  initializeVideo() {
-    const dimensions = this.isHeader ? this.getCurrentDimensions() : {};
-    this.container.innerHTML = this.createVideoHTML(dimensions);
-  }
-
-  getCurrentDimensions() {
-    const element = this.container.querySelector('video, img');
-    return {
-      height: element.offsetHeight,
-      width: element.offsetWidth
-    };
-  }
-
-  createVideoHTML(dimensions = {}) {
-    const style = dimensions.height ? 
-      `style="height: ${dimensions.height}px; width: ${dimensions.width}px;"` : '';
-    return `
-      <video autoplay loop muted playsinline ${style}>
-        <source src="${CONFIG.paths.animatedLogo}" type="video/mp4">
-      </video>
-    `;
-  }
-
-  createImageHTML(dimensions = {}) {
-    const style = dimensions.height ? 
-      `style="height: ${dimensions.height}px; width: ${dimensions.width}px;"` : '';
-    return `
-      <img src="${CONFIG.paths.logo}" alt="Logo" ${style}>
-    `;
-  }
-
-  toggleMedia() {
-    const dimensions = this.isHeader ? this.getCurrentDimensions() : {};
-    this.container.innerHTML = this.isVideo ? 
-      this.createImageHTML(dimensions) : 
-      this.createVideoHTML(dimensions);
-    this.isVideo = !this.isVideo;
-  }
-
-  initializeEvents() {
-    this.container.addEventListener('click', () => this.toggleMedia());
-  }
-}
-
-// Inicialización cuando el DOM está listo
-document.addEventListener('DOMContentLoaded', () => {
-  // Inicializar video publicitario
-  const adPlayer = new BrandVideoPlayer(
-    document.getElementById('videoBrand'),
-    document.querySelector('.mute-toggle')
-  );
-
-  // Inicializar video testimonial
-  const testimonialPlayer = new TestimonialPlayer(
-    document.getElementById('video-testimonio'),
-    document.getElementById('overlay-testimonio')
-  );
-
-  // Inicializar logos animados
-  const avatarLogo = new AnimatedLogo(
-    document.getElementById('avatarContainer')
-  );
-  
-  const headerLogo = new AnimatedLogo(
-    document.getElementById('logoCabeceraContainer'),
-    true
-  );
+// Ejecutar al cargar
+document.addEventListener("DOMContentLoaded", () => {
+  generarFormasGeometricas();
 });
+
+
+
+
+
+
+
